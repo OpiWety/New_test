@@ -1,31 +1,39 @@
+// ReSharper disable LocalizableElement
+// ReSharper disable SpecifyACultureInStringConversionExplicitly
 namespace calc
 {
     public partial class Form1 : Form
-    {   int MathCount;
+    {
+        int MathCount;
         int count = 1;
-        double num1, num2 ,num3;
+        public double num1;
+        public double num2;
+        public int num1Count;
+        public int num2Count;
+        public int foucsOnNum = 1;
         string number1, number2;
         private bool flag = true;
+
+        private CalculatorHelper helper;
         // This is my first commit!
         public Form1()
         {
             InitializeComponent();
+            helper = new CalculatorHelper(this);
             button16.Enabled = false;
             button17.Enabled = false;
-            button1.BackColor = Color.Bisque;
-            button2.BackColor = Color.Bisque;
-            button3.BackColor = Color.Bisque;
-            button4.BackColor = Color.Bisque;
+            Number2Button.BackColor = Color.Bisque;
+            Number3Button.BackColor = Color.Bisque;
+            Number4Button.BackColor = Color.Bisque;
             button5.BackColor = Color.Bisque;
             button6.BackColor = Color.Bisque;
             button7.BackColor = Color.Bisque;
             button8.BackColor = Color.Bisque;
             button9.BackColor = Color.Bisque;
             button10.BackColor = Color.Bisque;
-            button1.ForeColor= Color.Brown;
-            button2.ForeColor = Color.Brown;
-            button3.ForeColor = Color.Brown;
-            button4.ForeColor = Color.Brown;
+            Number2Button.ForeColor = Color.Brown;
+            Number3Button.ForeColor = Color.Brown;
+            Number4Button.ForeColor = Color.Brown;
             button5.ForeColor = Color.Brown;
             button6.ForeColor = Color.Brown;
             button7.ForeColor = Color.Brown;
@@ -43,108 +51,24 @@ namespace calc
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (count == 1)
-            {
-                if (flag == true)
-                    num1 = num1 * 10 + 1;
-                else
-                {
-                    num1 = 1;
-                }
-                if (flag == false)
-                    count = 2;
-                
-               number1 = num1.ToString();
-               button17.Text = number1;
-
-
-            }
-            else if (count == 2)
-            {
-                if (flag == true)
-                    num1 = num1 * 10 + 1;
-                else
-                {
-                    num1 = 1;
-                }
-                if (flag == false)
-                    count = 1;
-                number2 = num2.ToString();
-                button17.Text = number2;
-            }
-            
+            helper.NumberButtonPressed(Number1Button);
         }
+
         private void button2_Click(object sender, EventArgs e)
         {
-            if (count == 1)
-            {
-                if (flag == true)
-                    num1 = num1*10+2;
-                else
-                {
-                    num1 = 2;
-                }
-                if (flag == false)
-                    count = 2;
-
-                number1 = num1.ToString();
-                button17.Text = number1;
-            }
-            else if (count == 2)
-            {
-                if (flag == true)
-                    num1 = num1 * 10 + 2;
-                else
-                {
-                    num1 = 2;
-                }
-                if (flag == false)
-                    count = 1;
-                number2 = num2.ToString();
-                button17.Text = number2;
-            }
+            helper.NumberButtonPressed(Number2Button);
         }
+
         private void button3_Click(object sender, EventArgs e)
         {
-            if (count == 1)
-            {
-         
-                num1 = 3;
-                
-                    count = 2;
-                
-                number1 = num1.ToString();
-                button17.Text = number1;
-            }
-            else if (count ==  2)
-            {
-    
-                num2 = 3;
-                count = 1;
-                number2 = num2.ToString();
-                button17.Text += number2;
-            }
+            helper.NumberButtonPressed(Number3Button);
         }
+
         private void button4_Click(object sender, EventArgs e)
         {
-            if (count == 1)
-            {
-                num1 = 4;
-                
-                    count = 2;
-                
-                number1 = num1.ToString();
-                button17.Text = number1;
-            }
-            else if (count == 2)
-            {
-                num2 = 4;
-                count = 1;
-                number2 = num2.ToString();
-                button17.Text += number2;
-            }
-
+            helper.NumberButtonPressed(Number4Button);
         }
+
         private void button5_Click(object sender, EventArgs e)
         {
             if (count == 1)
@@ -164,6 +88,7 @@ namespace calc
                 button17.Text += number2;
             }
         }
+
         private void button6_Click(object sender, EventArgs e)
         {
             if (count == 1)
@@ -183,6 +108,7 @@ namespace calc
                 button17.Text += number2;
             }
         }
+
         private void button7_Click(object sender, EventArgs e)
         {
             if (count == 1)
@@ -202,14 +128,15 @@ namespace calc
                 button17.Text += number2;
             }
         
-    }
+        }
+
         private void button8_Click(object sender, EventArgs e)
         {
             if (count == 1)
             {
                 num1 = 8;
 
-                    count = 2;
+                count = 2;
                 
                 number1 = num1.ToString();
                 button17.Text = number1;
@@ -222,14 +149,15 @@ namespace calc
                 button17.Text += number2;
             }
         
-    }
+        }
+
         private void button9_Click(object sender, EventArgs e)
         {
             if (count == 1)
             {
                 num1 = 9;
                 
-                    count = 2;
+                count = 2;
                 
                 number1 = num1.ToString();
                 button17.Text = number1;
@@ -242,14 +170,15 @@ namespace calc
                 button17.Text += number2;
             }
         
-    }
+        }
+
         private void button10_Click(object sender, EventArgs e)
         {
             if (count == 1)
             {
                 num1 = 0;
                
-                    count = 2;
+                count = 2;
                 
                 number1 = num1.ToString();
                 button17.Text = number1;
@@ -262,51 +191,50 @@ namespace calc
                 button17.Text += number2;
             }
         
-    }
+        }
 
         private void button11_Click(object sender, EventArgs e)
         {
             if (MathCount == 1)
             {
-                num3 = num1 + num2;
-                button17.Text = num3.ToString();
+                var n = num1 + num2;
+                button17.Text = n.ToString();
             }
             else if (MathCount == 2)
             {
-                num3 = num1 - num2;
-                button17.Text = num3.ToString();
+                var n = num1 - num2;
+                button17.Text = n.ToString();
             }
             else if (MathCount == 3)
             {
-                num3 = num1 * num2;
-                button17.Text = num3.ToString();
+                var n = num1 * num2;
+                button17.Text = n.ToString();
             }
             else if (MathCount == 4)
             {
-                num3 = num1 / num2;
-                button17.Text = num3.ToString();
+                var n = num1 / num2;
+                
+                button17.Text = n.ToString();
             }
 
         }
 
         private void button12_Click(object sender, EventArgs e)
         {
-           
-            button17.Text = num1.ToString() + " + ";
+            button17.Text = num1 + " + ";
             MathCount = 1;
+            foucsOnNum++;
         }
 
         private void button13_Click(object sender, EventArgs e)
         {
-            button17.Text = num1.ToString() + " - ";
+            button17.Text = num1 + " - ";
             MathCount = 2;
         }
 
-   
-
         private void button14_Click(object sender, EventArgs e)
         {
-            button17.Text = num1.ToString() + " * ";
+            button17.Text = num1 + " * ";
             MathCount = 3;
         }
 
@@ -332,19 +260,20 @@ namespace calc
 
         private void button16_Click(object sender, EventArgs e)
         {
-            num1 = num3;
+            //num1 = num3;
         }
 
         private void button15_Click(object sender, EventArgs e)
         {
-            button17.Text = num1.ToString() + " / ";
+            button17.Text = num1 + " / ";
             MathCount = 4;
         }
+
         private void button17_Click(object sender, EventArgs e)
         {
 
         }
 
-
+        
     }
 }

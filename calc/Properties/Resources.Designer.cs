@@ -59,5 +59,15 @@ namespace calc.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap nerd_smoking {
+            get {
+                object obj = ResourceManager.GetObject("nerd_smoking", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
