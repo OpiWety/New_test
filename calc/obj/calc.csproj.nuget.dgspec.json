@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\אלירן\\source\\repos\\calc\\calc\\calc.csproj": {}
+    "D:\\calc\\New_test\\calc\\calc.csproj": {}
   },
   "projects": {
-    "C:\\Users\\אלירן\\source\\repos\\calc\\calc\\calc.csproj": {
+    "D:\\calc\\New_test\\calc\\calc.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\אלירן\\source\\repos\\calc\\calc\\calc.csproj",
+        "projectUniqueName": "D:\\calc\\New_test\\calc\\calc.csproj",
         "projectName": "calc",
-        "projectPath": "C:\\Users\\אלירן\\source\\repos\\calc\\calc\\calc.csproj",
-        "packagesPath": "C:\\Users\\אלירן\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\אלירן\\source\\repos\\calc\\calc\\obj\\",
+        "projectPath": "D:\\calc\\New_test\\calc\\calc.csproj",
+        "packagesPath": "C:\\Users\\yisha\\.nuget\\packages\\",
+        "outputPath": "D:\\calc\\New_test\\calc\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\אלירן\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\yisha\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,8 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Users\\אלירן\\Downloads\\Nukpkg_4\\Nukpkg": {},
+          "C:\\Users\\yisha\\Downloads\\Store Solution\\Functions\\bin": {},
+          "C:\\Users\\yisha\\source\\repos\\ChatTogether\\Form Functions\\bin": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
